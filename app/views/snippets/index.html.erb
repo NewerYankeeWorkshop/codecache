@@ -3,17 +3,11 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @snippets.each do |snippet| %>
   <tr>
-    <td><%= snippet.title %></td>
-    <td><%= snippet.body %></td>
-    <td><%= link_to 'Show', snippet %></td>
-    <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
+    <td><%= link_to snippet.title, snippet %></td>
   </tr>
 <% end %>
 </table>
