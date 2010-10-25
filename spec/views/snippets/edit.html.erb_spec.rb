@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe "snippets/edit.html.erb" do
   before(:each) do
+    # http://github.com/plataformatec/simple_form/issues/issue/57
+    controller.stub(:action_name) { 'edit' }
     @snippet = assign(:snippet, stub_model(Snippet,
       :new_record? => false,
       :title => "MyString",
