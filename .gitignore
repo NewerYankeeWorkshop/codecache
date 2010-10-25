@@ -1,0 +1,16 @@
+# system/editor files
+.DS_Store
+*.sw?
+*.scratch.*
+
+# rails-related
+coverage/*
+db/schema.rb
+db/*.sqlite3
+db/*.db
+doc/app
+log/*.log
+tmp/**/*
+.bundle
+Gemfile.lock
+
