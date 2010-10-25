@@ -29,7 +29,7 @@ gem "sqlite3-ruby", "1.2.5"
 #   gem 'webrat'
 # end
 
-group :test do
+group :test, :development do
   gem 'ruby-debug',         '0.10.3'
   gem 'launchy',            '0.3.5'
   gem 'capybara',           '0.3.6'
