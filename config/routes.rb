@@ -1,5 +1,5 @@
 Codecache::Application.routes.draw do
-  resources :snippets
+  resources :snippets, :only => [:new, :create, :edit, :update, :show, :index]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

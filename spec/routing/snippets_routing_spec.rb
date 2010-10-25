@@ -27,9 +27,5 @@ describe SnippetsController do
       { :put => "/snippets/1" }.should route_to(:controller => "snippets", :action => "update", :id => "1")
     end
 
-    it "recognizes and generates #destroy" do
-      { :delete => "/snippets/1" }.should route_to(:controller => "snippets", :action => "destroy", :id => "1")
-    end
-
   end
 end

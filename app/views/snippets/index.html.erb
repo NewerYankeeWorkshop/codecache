@@ -6,7 +6,6 @@
     <th>Body</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @snippets.each do |snippet| %>
@@ -15,7 +14,6 @@
     <td><%= snippet.body %></td>
     <td><%= link_to 'Show', snippet %></td>
     <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
-    <td><%= link_to 'Destroy', snippet, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

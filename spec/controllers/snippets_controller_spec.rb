@@ -110,18 +110,4 @@ describe SnippetsController do
 
   end
 
-  describe "DELETE destroy" do
-    it "destroys the requested snippet" do
-      Snippet.should_receive(:find).with("37") { mock_snippet }
-      mock_snippet.should_receive(:destroy)
-      delete :destroy, :id => "37"
-    end
-
-    it "redirects to the snippets list" do
-      Snippet.stub(:find) { mock_snippet }
-      delete :destroy, :id => "1"
-      response.should redirect_to(snippets_url)
-    end
-  end
-
 end

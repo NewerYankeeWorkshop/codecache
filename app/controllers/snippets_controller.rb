@@ -69,15 +69,4 @@ class SnippetsController < ApplicationController
     end
   end
 
-  # DELETE /snippets/1
-  # DELETE /snippets/1.xml
-  def destroy
-    @snippet = Snippet.find(params[:id])
-    @snippet.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(snippets_url) }
-      format.xml  { head :ok }
-    end
-  end
 end
