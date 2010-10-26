@@ -3,6 +3,10 @@ require "spec_helper"
 describe SnippetsController do
   describe "routing" do
 
+    it "recognizes and generates #index as home page" do
+      { :get => "/" }.should route_to(:controller => "snippets", :action => "index")
+    end
+
     it "recognizes and generates #index" do
       { :get => "/snippets" }.should route_to(:controller => "snippets", :action => "index")
     end
