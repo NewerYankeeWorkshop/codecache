@@ -4,12 +4,18 @@ Feature: Share killer code snippet with the world
   I want to create a web page with a code snippet
 
   Scenario: Share new snippet
-    Given I am on the new snippet page
+    Given the following languages:
+      | name |
+      | Ruby |
+      | C++  |
+    And I am on the new snippet page
     When I fill in "Title" with "My Hello World Example"
     And I fill in "Body" with "puts 'Hello World'"
+    And I select "Ruby" from "Language"
     And I press "Create"
     Then I should see "My Hello World Example"
     And I should see "puts 'Hello World'"
+    And I should see "Ruby"
 
   Scenario: Review snippets
     Given the following snippets:

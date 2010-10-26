@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <b>Language:</b>
+  <%= @snippet.language.try(:name) %>
+</p>
+
 <p>
   <b>Title:</b>
   <%= @snippet.title %>

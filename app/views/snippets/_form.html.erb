@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :language_id %><br />
+    <%= f.select :language_id, Language.all.map{|language| [language.name, language.id ] } %>
+  </div>
+  <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
